@@ -17,6 +17,14 @@ class CalculationManager {
         defaults.object(forKey: "lastPeriodEndDate")
     }
     
+    func checkForUserDefaultsData() -> Bool {
+        if getCurrentPeriodStartDate() != nil || getLastPeriodEndDate() != nil || getArrayOfLengthOfEachCycle() != nil {
+            return true
+        }
+        
+        return false
+    }
+    
     func recordCurrentPeriodStartDate() {
         defaults.set(Date(), forKey: "currentPeriodStartDate")
     }

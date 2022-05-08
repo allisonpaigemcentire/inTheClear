@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: Any) {
         calculationManager.clearUserDefaults()
+        updateState()
     }
     
     
@@ -79,13 +80,25 @@ class ViewController: UIViewController {
     
     
     private func updateState() {
+        // apply a gradient to the clearButton if any data is found in user defaults
+        guard let blue = UIColor(named: "Bdazzled Blue")?.cgColor, let pink = UIColor(named: "Light Pink")?.cgColor else { return }
+        if calculationManager.checkForUserDefaultsData() {
+            clearButton.applyGradient(colors: [blue, pink])
+        } else {
+            clearButton.removeGradient()
+            clearButton.backgroundColor = UIColor(named: "Bdazzled Blue")
+        }
+        
         let numberOfDaysInCurrentPeriod = calculationManager.numberOfDaysInCurrentPeriod()
         guard numberOfDaysInCurrentPeriod == 0 else {
+            // display state when user is recording a period
             countDownLabel.text = String(numberOfDaysInCurrentPeriod)
             countDownDescriptionLabel.text = "days in current period"
             displayRecordingButton()
             return
         }
+        
+        // display state when user is not recording a period
         countDownLabel.text = String(calculationManager.numberOfDaysUntilNextPeriod())
         countDownDescriptionLabel.text = "days until next period"
         displayPlusButton()
@@ -93,6 +106,7 @@ class ViewController: UIViewController {
     
     private func configureUI() {
         clearButton.layer.cornerRadius = 25.0
+        clearButton.titleLabel?.text = "CLEAR"
     }
 }
 
