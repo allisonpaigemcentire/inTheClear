@@ -13,8 +13,8 @@ class CalculationManager {
     
     func clearUserDefaults() {
         defaults.removeObject(forKey: "currentPeriodStartDate")
-        defaults.object(forKey: "lengthOfEachCycle")
-        defaults.object(forKey: "lastPeriodEndDate")
+        defaults.removeObject(forKey: "lengthOfEachCycle")
+        defaults.removeObject(forKey: "lastPeriodEndDate")
     }
     
     func checkForUserDefaultsData() -> Bool {

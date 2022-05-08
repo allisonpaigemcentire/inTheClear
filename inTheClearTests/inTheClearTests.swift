@@ -23,6 +23,21 @@ class inTheClearTests: XCTestCase {
         super.tearDown()
     }
 
+    func test_checkForUserDefaultsData_ReturnsExpectedBool() {
+        XCTAssertTrue(SUT.checkForUserDefaultsData())
+    }
+    
+    func test_clearUserDefaults_checkForUserDefaultsData_ReturnsExpectedBool() {
+        SUT.clearUserDefaults()
+        XCTAssertFalse(SUT.checkForUserDefaultsData())
+    }
+    
+    func test_getCurrentPeriodStartDate_numberOfDaysInCurrentPeriod_ReturnsExpectedInt() {
+        XCTAssertEqual(SUT.numberOfDaysInCurrentPeriod(), 0)
+        SUT.recordCurrentPeriodStartDate()
+        XCTAssertEqual(SUT.numberOfDaysInCurrentPeriod(), 1)
+    }
+    
     func test_averageDaysInCycle_returnsExpectedInt() {
         XCTAssertEqual(29, SUT.averageDaysInCycle())
     }
