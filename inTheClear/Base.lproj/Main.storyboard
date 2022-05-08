@@ -37,16 +37,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90r-Iy-uaE">
                                 <rect key="frame" x="52" y="632" width="319" height="50"/>
+                                <color key="backgroundColor" name="Bdazzled Blue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MXU-x5-dnh"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="CLEAR" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="Bdazzled Blue"/>
-                                        <color key="strokeColor" name="Aero"/>
-                                    </backgroundConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="CLEAR"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CLEAR">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -54,14 +53,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mQ-xi-vlu">
-                                <rect key="frame" x="354" y="44" width="40" height="40"/>
+                                <rect key="frame" x="344" y="44" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="W6U-KX-JgP"/>
-                                    <constraint firstAttribute="height" constant="40" id="kjg-vz-yoK"/>
+                                    <constraint firstAttribute="height" constant="50" id="Cz6-yA-dYc"/>
+                                    <constraint firstAttribute="width" constant="50" id="X0X-TE-niv"/>
                                 </constraints>
+                                <color key="tintColor" name="Bdazzled Blue"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
+                                    <color key="titleColor" name="Bdazzled Blue"/>
+                                    <imageReference key="image" image="plus" symbolScale="default"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                                 <connections>
@@ -73,7 +74,6 @@
                         <color key="backgroundColor" name="Aero"/>
                         <constraints>
                             <constraint firstItem="90r-Iy-uaE" firstAttribute="top" secondItem="IhF-yb-b92" secondAttribute="bottom" constant="110" id="0Eg-oa-tRG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mQ-xi-vlu" secondAttribute="trailing" constant="20" id="8hZ-Jy-ujB"/>
                             <constraint firstItem="dez-OS-qSQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GRw-wr-G0f"/>
                             <constraint firstItem="IhF-yb-b92" firstAttribute="top" secondItem="dez-OS-qSQ" secondAttribute="bottom" id="I72-aE-GFV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="90r-Iy-uaE" secondAttribute="trailing" constant="43" id="WNi-pA-rft"/>
@@ -82,6 +82,7 @@
                             <constraint firstItem="6mQ-xi-vlu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eon-Wt-rgc"/>
                             <constraint firstItem="90r-Iy-uaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="hIi-hA-vFy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6mQ-xi-vlu" secondAttribute="trailing" constant="20" id="hkb-gg-AZ0"/>
+                            <constraint firstItem="6mQ-xi-vlu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vkJ-Kh-r0B"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus" width="512" height="512"/>
         <namedColor name="Aero">
             <color red="0.49411764705882355" green="0.69803921568627447" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
