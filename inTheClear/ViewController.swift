@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     }
     
     private func displayRecordingButton() {
-        recordPeriodButton.tintColor = .red
+        recordPeriodButton.tintColor = UIColor(named: "Red Salsa")
         let image = UIImage(named: "record")
         recordPeriodButton.setImage(image, for: .normal)
     }
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     
     private func updateState() {
         // apply a gradient to the clearButton if any data is found in user defaults
-        guard let blue = UIColor(named: "Bdazzled Blue")?.cgColor, let pink = UIColor(named: "Light Pink")?.cgColor else { return }
+        guard let blue = UIColor(named: "Bdazzled Blue")?.cgColor, let pink = UIColor(named: "Red Salsa")?.cgColor else { return }
         if calculationManager.checkForUserDefaultsData() {
             clearButton.applyGradient(colors: [blue, pink])
         } else {

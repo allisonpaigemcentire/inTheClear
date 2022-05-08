@@ -29,7 +29,7 @@ extension UIButton {
         self.contentVerticalAlignment = .center
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.titleLabel?.textColor = UIColor.white
+        self.titleLabel?.textColor = .white
     }
     
     func removeGradient() {
