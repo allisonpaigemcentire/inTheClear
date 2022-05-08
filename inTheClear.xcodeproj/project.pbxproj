@@ -19,6 +19,7 @@
 		F33A5E222828454600B43C09 /* CalculationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A5E212828454500B43C09 /* CalculationManager.swift */; };
 		F33A5E2628284E9400B43C09 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A5E2528284E9400B43C09 /* Date+Extensions.swift */; };
 		F3ACC9CB282866ED00CC331F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACC9CA282866ED00CC331F /* UIButton+Extensions.swift */; };
+		F3ACC9CD2828716900CC331F /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACC9CC2828716900CC331F /* MockUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F33A5E212828454500B43C09 /* CalculationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationManager.swift; sourceTree = "<group>"; };
 		F33A5E2528284E9400B43C09 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		F3ACC9CA282866ED00CC331F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		F3ACC9CC2828716900CC331F /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F33A5E082828389800B43C09 /* inTheClearTests.swift */,
+				F3ACC9CC2828716900CC331F /* MockUserDefaults.swift */,
 			);
 			path = inTheClearTests;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3ACC9CD2828716900CC331F /* MockUserDefaults.swift in Sources */,
 				F33A5E092828389800B43C09 /* inTheClearTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +513,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V243T33UAS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inTheClear.inTheClearTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,7 +533,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V243T33UAS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inTheClear.inTheClearTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

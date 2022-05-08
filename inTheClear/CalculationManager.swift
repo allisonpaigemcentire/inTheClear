@@ -9,7 +9,7 @@ import Foundation
 
 class CalculationManager {
     
-    let defaults = UserDefaults.standard
+    internal var defaults = UserDefaults.standard
     
     func clearUserDefaults() {
         defaults.removeObject(forKey: "currentPeriodStartDate")
