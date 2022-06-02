@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F30607DE28490FBA00401EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30607DD28490FBA00401EA4 /* Main.storyboard */; };
 		F30607E028495D5F00401EA4 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30607DF28495D5F00401EA4 /* ColorManager.swift */; };
+		F30607E428496B7500401EA4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30607E328496B7500401EA4 /* DatePickerView.swift */; };
 		F33A5DF22828389400B43C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A5DF12828389400B43C09 /* AppDelegate.swift */; };
 		F33A5DF42828389400B43C09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A5DF32828389400B43C09 /* SceneDelegate.swift */; };
 		F33A5DF62828389400B43C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33A5DF52828389400B43C09 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		F30607DD28490FBA00401EA4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F30607DF28495D5F00401EA4 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		F30607E328496B7500401EA4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		F33A5DEE2828389400B43C09 /* inTheClear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inTheClear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33A5DF12828389400B43C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F33A5DF32828389400B43C09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				F33A5E2528284E9400B43C09 /* Date+Extensions.swift */,
 				F3ACC9CA282866ED00CC331F /* UIButton+Extensions.swift */,
 				F30607DD28490FBA00401EA4 /* Main.storyboard */,
+				F30607E328496B7500401EA4 /* DatePickerView.swift */,
 				F33A5DFA2828389800B43C09 /* Assets.xcassets */,
 				F33A5DFC2828389800B43C09 /* LaunchScreen.storyboard */,
 				F33A5DFF2828389800B43C09 /* Info.plist */,
@@ -279,6 +282,7 @@
 				F33A5E222828454600B43C09 /* CalculationManager.swift in Sources */,
 				F33A5DF22828389400B43C09 /* AppDelegate.swift in Sources */,
 				F33A5DF42828389400B43C09 /* SceneDelegate.swift in Sources */,
+				F30607E428496B7500401EA4 /* DatePickerView.swift in Sources */,
 				F33A5E2628284E9400B43C09 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

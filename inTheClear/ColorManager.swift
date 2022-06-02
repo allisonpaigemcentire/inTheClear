@@ -18,7 +18,6 @@ class ColorManager {
     let defaultBlue = UIColor(named: "Bdazzled Blue")
     
     func getArrayOfColors(number: Int) -> [CGColor] {
-        print(number)
         let fullArray = [blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero, blue, pink, lightPink, blanchedAlmond, aero]
         var colorArray = [CGColor]()
         for item in 0...number {

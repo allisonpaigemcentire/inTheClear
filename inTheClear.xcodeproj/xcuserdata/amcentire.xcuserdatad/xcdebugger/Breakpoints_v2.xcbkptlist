@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D0F039F-A396-4BBB-977A-1FA94D408A15"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "inTheClear/CalculationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "numberOfDaysInCurrentPeriod()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D0F039F-A396-4BBB-977A-1FA94D408A15 - 23af60e57d670f16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "inTheClear.CalculationManager.numberOfDaysInCurrentPeriod() -&gt; Swift.Int"
+                  moduleName = "inTheClear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amcentire/Desktop/inTheClear/inTheClear/CalculationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "0D0F039F-A396-4BBB-977A-1FA94D408A15 - 23af60e57d670f16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "inTheClear.CalculationManager.numberOfDaysInCurrentPeriod() -&gt; Swift.Int"
+                  moduleName = "inTheClear"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amcentire/Desktop/inTheClear/inTheClear/CalculationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0848BFB0-9B2D-4D4A-9653-B0EDE7CF9469"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "inTheClear/CalculationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "numberOfDaysInCurrentPeriod()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

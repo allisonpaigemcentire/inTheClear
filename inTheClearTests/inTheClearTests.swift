@@ -34,7 +34,7 @@ class inTheClearTests: XCTestCase {
     
     func test_getCurrentPeriodStartDate_numberOfDaysInCurrentPeriod_ReturnsExpectedInt() {
         XCTAssertEqual(SUT.numberOfDaysInCurrentPeriod(), 0)
-        SUT.recordCurrentPeriodStartDate()
+        SUT.recordCurrentPeriodStartDate(date: Date())
         XCTAssertEqual(SUT.numberOfDaysInCurrentPeriod(), 1)
     }
     

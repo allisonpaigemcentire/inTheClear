@@ -73,11 +73,63 @@
                         <outlet property="countDownDescriptionLabel" destination="07f-30-eSf" id="VsE-gg-Pqc"/>
                         <outlet property="countDownLabel" destination="KjL-fN-7Oy" id="e4r-QK-kOQ"/>
                         <outlet property="recordPeriodButton" destination="OeQ-XW-Zhb" id="ys4-0d-IVK"/>
+                        <segue destination="dse-VG-HUz" kind="presentation" identifier="showDatePicker" id="eTj-KY-PvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+        <!--Date Picker View-->
+        <scene sceneID="PWP-f3-KMR">
+            <objects>
+                <viewController id="dse-VG-HUz" customClass="DatePickerView" customModule="inTheClear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e41-dI-eo7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="cJ7-19-s1x">
+                                <rect key="frame" x="47" y="230.5" width="320" height="381.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did your current cycle start?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="279-jU-Qlk">
+                                        <rect key="frame" x="29" y="0.0" width="262" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="0wg-WV-W9l">
+                                        <rect key="frame" x="0.0" y="77.5" width="320" height="216"/>
+                                        <connections>
+                                            <action selector="datePickerChanged:" destination="dse-VG-HUz" eventType="valueChanged" id="Sbn-LO-m6N"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-JP-ld7">
+                                        <rect key="frame" x="126.5" y="350.5" width="67" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="confirmButtonTapped:" destination="dse-VG-HUz" eventType="touchUpInside" id="cSt-kf-u8i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5PR-XM-sHI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJ7-19-s1x" firstAttribute="centerX" secondItem="e41-dI-eo7" secondAttribute="centerX" id="UG1-9M-Kjx"/>
+                            <constraint firstItem="cJ7-19-s1x" firstAttribute="centerY" secondItem="e41-dI-eo7" secondAttribute="centerY" id="aMs-Rw-IFm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="i5A-JP-ld7" id="0IW-dh-dx9"/>
+                        <outlet property="datePicker" destination="0wg-WV-W9l" id="YND-eu-G56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gf6-Qg-evz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.95652173913049" y="111.83035714285714"/>
         </scene>
     </scenes>
     <resources>

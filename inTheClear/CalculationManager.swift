@@ -25,8 +25,8 @@ class CalculationManager {
         return false
     }
     
-    func recordCurrentPeriodStartDate() {
-        defaults.set(Date(), forKey: "currentPeriodStartDate")
+    func recordCurrentPeriodStartDate(date: Date) {
+        defaults.set(date, forKey: "currentPeriodStartDate")
     }
     
     func recordLastPeriodEndDate() {

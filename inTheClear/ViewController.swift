@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             return
         }
         startRecordingCurrentPeriod()
-        
+        performSegue(withIdentifier: "showDatePicker", sender: nil)
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
@@ -40,7 +40,6 @@ class ViewController: UIViewController {
     
     
     private func startRecordingCurrentPeriod() {
-        calculationManager.recordCurrentPeriodStartDate()
         displayRecordingButton()
         updateState()
     }
@@ -80,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     
-    private func updateState() {
+    func updateState() {
         // apply a gradient to the clearButton if any data is found in user defaults
         let colorManager = ColorManager()
         let numberOfPastCyclesInData = calculationManager.getArrayOfLengthOfEachCycle()?.count ?? 0
@@ -113,5 +112,12 @@ class ViewController: UIViewController {
         clearButton.titleLabel?.textColor = .white
         clearButton.backgroundColor = colorManager.defaultBlue
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       guard segue.identifier == "showDatePicker" else { return }
+       let destination = segue.destination as! DatePickerView
+       destination.callback = {
+           self.updateState()
+       }
+    }
 }
-

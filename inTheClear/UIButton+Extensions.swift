@@ -10,7 +10,6 @@ import UIKit
 
 extension UIButton {
     func applyGradient(colors: [CGColor]) {
-        print(colors)
         self.backgroundColor = nil
         self.layoutIfNeeded()
         let gradientLayer = CAGradientLayer()

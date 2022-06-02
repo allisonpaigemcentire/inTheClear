@@ -23,20 +23,20 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN THE CLEAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-hi-B9Z">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="57"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
-                                        <color key="textColor" name="Aero"/>
+                                        <color key="textColor" name="Red Salsa"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Your Period Without Being Tracked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-jw-llb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Your Cycle Without Being Tracked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-jw-llb">
                                         <rect key="frame" x="0.0" y="73" width="350" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="Red Salsa"/>
+                                        <color key="textColor" name="Bdazzled Blue"/>
                                         <color key="highlightedColor" name="AccentColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Blanched Almond"/>
+                        <color key="backgroundColor" name="Light Pink"/>
                         <constraints>
                             <constraint firstItem="Xy1-Tr-R56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="BIL-HY-v9B"/>
                             <constraint firstItem="Xy1-Tr-R56" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zfn-5d-fIz"/>
@@ -52,14 +52,14 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Aero">
-            <color red="0.49411764705882355" green="0.69803921568627447" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Bdazzled Blue">
+            <color red="0.0" green="0.50588235294117645" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Blanched Almond">
-            <color red="0.9882352941176471" green="0.92549019607843142" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Light Pink">
+            <color red="0.99607843137254903" green="0.85098039215686272" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Red Salsa">
-            <color red="0.97647058823529409" green="0.22352941176470589" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.44313725490196076" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
