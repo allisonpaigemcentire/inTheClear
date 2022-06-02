@@ -10,6 +10,7 @@ import UIKit
 
 extension UIButton {
     func applyGradient(colors: [CGColor]) {
+        print(colors)
         self.backgroundColor = nil
         self.layoutIfNeeded()
         let gradientLayer = CAGradientLayer()
@@ -30,6 +31,7 @@ extension UIButton {
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
         self.titleLabel?.textColor = .white
+        self.setTitle("CLEAR", for: .normal)
     }
     
     func removeGradient() {

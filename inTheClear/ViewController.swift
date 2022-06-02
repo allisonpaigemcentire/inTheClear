@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordPeriodButton: UIButton!
     
     private let calculationManager = CalculationManager()
+    private let colorManager = ColorManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,32 +82,36 @@ class ViewController: UIViewController {
     
     private func updateState() {
         // apply a gradient to the clearButton if any data is found in user defaults
-        guard let blue = UIColor(named: "Bdazzled Blue")?.cgColor, let pink = UIColor(named: "Red Salsa")?.cgColor else { return }
-        if calculationManager.checkForUserDefaultsData() {
-            clearButton.applyGradient(colors: [blue, pink])
+        let colorManager = ColorManager()
+        let numberOfPastCyclesInData = calculationManager.getArrayOfLengthOfEachCycle()?.count ?? 0
+        if calculationManager.checkForUserDefaultsData() && numberOfPastCyclesInData != 0 {
+            clearButton.removeGradient()
+            clearButton.applyGradient(colors: colorManager.getArrayOfColors(number: numberOfPastCyclesInData))
         } else {
             clearButton.removeGradient()
-            clearButton.backgroundColor = UIColor(named: "Bdazzled Blue")
+            configureUI()
         }
         
         let numberOfDaysInCurrentPeriod = calculationManager.numberOfDaysInCurrentPeriod()
         guard numberOfDaysInCurrentPeriod == 0 else {
             // display state when user is recording a period
             countDownLabel.text = String(numberOfDaysInCurrentPeriod)
-            countDownDescriptionLabel.text = "days in current period"
+            countDownDescriptionLabel.text = "days in current cycle"
             displayRecordingButton()
             return
         }
         
         // display state when user is not recording a period
         countDownLabel.text = String(calculationManager.numberOfDaysUntilNextPeriod())
-        countDownDescriptionLabel.text = "days until next period"
+        countDownDescriptionLabel.text = "days until next cycle"
         displayPlusButton()
     }
     
     private func configureUI() {
-        clearButton.layer.cornerRadius = 25.0
-        clearButton.titleLabel?.text = "CLEAR"
+        clearButton.layer.cornerRadius = clearButton.frame.height/2
+        clearButton.setTitle("NO DATA TO CLEAR", for: .normal)
+        clearButton.titleLabel?.textColor = .white
+        clearButton.backgroundColor = colorManager.defaultBlue
     }
 }
 
