@@ -41,6 +41,7 @@ class DatePickerView: UIViewController {
         confirmButton.titleLabel?.textColor = .white
         confirmButton.backgroundColor = colorManager.defaultBlue
         confirmButton.isHidden = isCurrentlyRecording
+        confirmEndDateButton.layer.cornerRadius = confirmButton.frame.height/2
         confirmEndDateButton.setTitle("CONFIRM END DATE", for: .normal)
         confirmEndDateButton.titleLabel?.textColor = .white
         confirmEndDateButton.backgroundColor = colorManager.defaultBlue
