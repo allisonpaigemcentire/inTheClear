@@ -67,7 +67,7 @@ class DatePickerView: UIViewController {
     @IBAction func confirmButtonTapped(_ sender: Any) {
         confirmButton.setTitle("START DATE CONFIRMED", for: .normal)
         confirmEndDateButton.isHidden = false
-        descriptionLabel.text = "Has your current cycle ended yet?"
+        descriptionLabel.text = "Has your current cycle ended yet? If not, dismiss this view."
         guard let date = startDateToRecord else {
             calculationManager.recordCurrentPeriodStartDate(date: Date())
             return
