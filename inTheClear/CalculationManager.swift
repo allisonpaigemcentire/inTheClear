@@ -29,11 +29,12 @@ class CalculationManager {
         defaults.set(date, forKey: "currentPeriodStartDate")
     }
     
-    func recordLastPeriodEndDate() {
-        defaults.set(Date(), forKey: "lastPeriodEndDate")
+    func recordLastPeriodEndDate(date: Date) {
+        defaults.set(date, forKey: "lastPeriodEndDate")
     }
     
-    func recordCurrentPeriodEndDate() {
+    func recordCurrentPeriodEndDate(date: Date) {
+        recordLastPeriodEndDate(date: date)
         defaults.removeObject(forKey: "currentPeriodStartDate")
         let numberOfDaysInLastCycle = numberOfDaysInLastCycle()
         guard var arrayOfLengthOfEachCycle = getArrayOfLengthOfEachCycle() else {
@@ -93,4 +94,11 @@ class CalculationManager {
         return interval.day ?? 0
     }
     
+    func getFormattedDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: date)
+    }
 }

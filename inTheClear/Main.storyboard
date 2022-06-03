@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="cJ7-19-s1x">
-                                <rect key="frame" x="47" y="230.5" width="320" height="381.5"/>
+                                <rect key="frame" x="47" y="186.5" width="320" height="469.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did your current cycle start?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="279-jU-Qlk">
                                         <rect key="frame" x="29" y="0.0" width="262" height="20.5"/>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-JP-ld7">
-                                        <rect key="frame" x="126.5" y="350.5" width="67" height="31"/>
+                                        <rect key="frame" x="0.0" y="350.5" width="320" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -112,7 +112,24 @@
                                             <action selector="confirmButtonTapped:" destination="dse-VG-HUz" eventType="touchUpInside" id="cSt-kf-u8i"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2E-uX-Orz">
+                                        <rect key="frame" x="0.0" y="438.5" width="320" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RECORD END DATE"/>
+                                        <connections>
+                                            <action selector="confirmButtonTapped:" destination="dse-VG-HUz" eventType="touchUpInside" id="8Xw-92-sHx"/>
+                                            <action selector="confirmEndButtonTapped:" destination="dse-VG-HUz" eventType="touchUpInside" id="Svi-AG-scp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="i5A-JP-ld7" firstAttribute="leading" secondItem="cJ7-19-s1x" secondAttribute="leading" id="2Lo-t4-nJJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="i2E-uX-Orz" secondAttribute="trailing" id="Ro9-il-WL0"/>
+                                    <constraint firstItem="i5A-JP-ld7" firstAttribute="leading" secondItem="cJ7-19-s1x" secondAttribute="leading" id="dKW-Yp-WoS"/>
+                                    <constraint firstItem="i2E-uX-Orz" firstAttribute="leading" secondItem="cJ7-19-s1x" secondAttribute="leading" id="f2A-lc-jl9"/>
+                                    <constraint firstAttribute="trailing" secondItem="i5A-JP-ld7" secondAttribute="trailing" id="nsq-xe-XnS"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5PR-XM-sHI"/>
@@ -124,7 +141,9 @@
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="i5A-JP-ld7" id="0IW-dh-dx9"/>
+                        <outlet property="confirmEndDateButton" destination="i2E-uX-Orz" id="V1c-4x-1Sw"/>
                         <outlet property="datePicker" destination="0wg-WV-W9l" id="YND-eu-G56"/>
+                        <outlet property="descriptionLabel" destination="279-jU-Qlk" id="He2-ur-ZJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gf6-Qg-evz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

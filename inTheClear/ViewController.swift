@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     private let calculationManager = CalculationManager()
     private let colorManager = ColorManager()
     
+    private var isCurrentlyRecording = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
         let shouldRecord = shouldStartRecording()
         guard shouldRecord else {
             stopRecordingCurrentPeriod()
+            performSegue(withIdentifier: "showDatePicker", sender: nil)
             return
         }
         startRecordingCurrentPeriod()
@@ -45,7 +48,6 @@ class ViewController: UIViewController {
     }
     
     private func stopRecordingCurrentPeriod() {
-        calculationManager.recordCurrentPeriodEndDate()
         displayPlusButton()
         updateState()
     }
@@ -94,8 +96,10 @@ class ViewController: UIViewController {
         let numberOfDaysInCurrentPeriod = calculationManager.numberOfDaysInCurrentPeriod()
         guard numberOfDaysInCurrentPeriod == 0 else {
             // display state when user is recording a period
+            isCurrentlyRecording = true
             countDownLabel.text = String(numberOfDaysInCurrentPeriod)
             countDownDescriptionLabel.text = "days in current cycle"
+            clearButton.setTitle("CLEAR", for: .normal)
             displayRecordingButton()
             return
         }
@@ -114,10 +118,11 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       guard segue.identifier == "showDatePicker" else { return }
-       let destination = segue.destination as! DatePickerView
-       destination.callback = {
-           self.updateState()
-       }
+        guard segue.identifier == "showDatePicker" else { return }
+        let destination = segue.destination as! DatePickerView
+        destination.isCurrentlyRecording = isCurrentlyRecording
+        destination.callback = {
+            self.updateState()
+        }
     }
 }

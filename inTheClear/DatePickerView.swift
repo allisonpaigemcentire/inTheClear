@@ -11,13 +11,17 @@ import UIKit
 class DatePickerView: UIViewController {
     
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var confirmEndDateButton: UIButton!
     
     private let calculationManager = CalculationManager()
     private let colorManager = ColorManager()
-    private var dateToRecord = Date()
+    private var startDateToRecord: Date?
+    private var endDateToRecord = Date()
     
+    var isCurrentlyRecording = false
     var callback : (() -> Void)?
     
     
@@ -33,22 +37,47 @@ class DatePickerView: UIViewController {
    
     private func configureUI() {
         confirmButton.layer.cornerRadius = confirmButton.frame.height/2
-        confirmButton.setTitle("CONFIRM DATE", for: .normal)
+        confirmButton.setTitle("CONFIRM START DATE", for: .normal)
         confirmButton.titleLabel?.textColor = .white
         confirmButton.backgroundColor = colorManager.defaultBlue
+        confirmButton.isHidden = isCurrentlyRecording
+        confirmEndDateButton.setTitle("CONFIRM END DATE", for: .normal)
+        confirmEndDateButton.titleLabel?.textColor = .white
+        confirmEndDateButton.backgroundColor = colorManager.defaultBlue
+        confirmEndDateButton.isHidden = !isCurrentlyRecording
+        if isCurrentlyRecording {
+            startDateToRecord = calculationManager.getCurrentPeriodStartDate()
+            guard let currentStartDate = calculationManager.getCurrentPeriodStartDate() else { return }
+            let readableDate = calculationManager.getFormattedDate(date: currentStartDate)
+            descriptionLabel.text = "Current start date: \(readableDate)"
+        }
     }
     
     
     
     @IBAction func datePickerChanged(_ sender: Any) {
-        dateToRecord = datePicker.date
+        guard startDateToRecord == nil else {
+            endDateToRecord = datePicker.date
+            return
+        }
+        startDateToRecord = datePicker.date
     }
     
-    
-    
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        calculationManager.recordCurrentPeriodStartDate(date: dateToRecord)
-        confirmButton.setTitle("DATE CONFIRMED", for: .normal)
-        print(dateToRecord)
+        confirmButton.setTitle("START DATE CONFIRMED", for: .normal)
+        confirmEndDateButton.isHidden = false
+        descriptionLabel.text = "Has your current cycle ended yet?"
+        guard let date = startDateToRecord else {
+            calculationManager.recordCurrentPeriodStartDate(date: Date())
+            return
+        }
+        calculationManager.recordCurrentPeriodStartDate(date: date)
+        
+    }
+    
+    @IBAction func confirmEndButtonTapped(_ sender: Any) {
+        calculationManager.recordCurrentPeriodEndDate(date: endDateToRecord)
+        confirmEndDateButton.setTitle("END DATE CONFIRMED", for: .normal)
+        descriptionLabel.text = "CYCLE RECORDED"
     }
 }
