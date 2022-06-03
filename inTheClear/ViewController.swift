@@ -123,6 +123,7 @@ class ViewController: UIViewController {
         destination.isCurrentlyRecording = isCurrentlyRecording
         destination.callback = {
             self.updateState()
+            self.isCurrentlyRecording = destination.isCurrentlyRecording
         }
     }
 }

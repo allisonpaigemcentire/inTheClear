@@ -79,5 +79,6 @@ class DatePickerView: UIViewController {
         calculationManager.recordCurrentPeriodEndDate(date: endDateToRecord)
         confirmEndDateButton.setTitle("END DATE CONFIRMED", for: .normal)
         descriptionLabel.text = "CYCLE RECORDED"
+        isCurrentlyRecording = false
     }
 }
